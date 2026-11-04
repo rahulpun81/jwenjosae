@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANTI-HORNY EMERGENCY CENTER™ — Certified Mood Control Department</title>
+<style>
+/* ==========================================================
+   ANTI-HORNY EMERGENCY CENTER™ — styles
+   ========================================================== */
+:root{
+  --pink:#ffc2dd; --pink-soft:#ffe3ef; --cherry:#e0194f; --neon:#ff1744;
+  --lav:#d9c8ff; --lav-deep:#8f6bd9; --baby:#bfe4ff; --baby-deep:#3a9be0;
+  --ink:#3b1f3f; --white:#fff;
+  --glass:rgba(255,255,255,.62); --shadow:0 14px 40px rgba(143,107,217,.22);
+  --radius:28px;
+  --font: ui-rounded,"SF Pro Rounded","Nunito","Quicksand","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font);color:var(--ink);line-height:1.5;overflow-x:hidden;min-height:100vh;
+  background:linear-gradient(160deg,#ffe3ef 0%,#e8dcff 45%,#cfeaff 100%);
+  background-attachment:fixed;
+}
+img,svg{max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;color:inherit}
+:focus-visible{outline:4px solid var(--lav-deep);outline-offset:3px;border-radius:14px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- floating background ---------- */
+.bg-layer{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg-layer span{position:absolute;bottom:-60px;opacity:.55;animation:floatUp linear infinite}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0) scale(.8);opacity:0}
+  10%{opacity:.6}
+  100%{transform:translateY(-115vh) rotate(40deg) scale(1.1);opacity:0}
+}
+.bubble{border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,rgba(191,228,255,.5));border:1px solid rgba(255,255,255,.8)}
+
+main,header,footer{position:relative;z-index:1}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+section{padding:42px 0}
+
+/* ---------- common ---------- */
+.card{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:2px solid rgba(255,255,255,.85);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+.pill{display:inline-block;padding:7px 16px;border-radius:999px;font-weight:800;font-size:.85rem;letter-spacing:.04em}
+h1,h2,h3{line-height:1.1}
+h2{font-size:clamp(1.6rem,4.5vw,2.4rem);text-align:center;font-weight:900;color:var(--cherry);margin-bottom:8px}
+.sub{text-align:center;opacity:.8;margin-bottom:24px;font-weight:600}
+.btn{
+  display:inline-block;padding:14px 22px;border-radius:999px;font-weight:900;font-size:1rem;
+  background:linear-gradient(135deg,var(--cherry),#ff5c8a);color:#fff;
+  box-shadow:0 8px 0 #a30f38,0 14px 24px rgba(224,25,79,.3);transition:transform .12s,box-shadow .12s;
+  margin:6px;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(6px);box-shadow:0 2px 0 #a30f38}
+.btn.blue{background:linear-gradient(135deg,var(--baby-deep),#6cc2ff);box-shadow:0 8px 0 #246fa8,0 14px 24px rgba(58,155,224,.3)}
+.btn.blue:active{box-shadow:0 2px 0 #246fa8}
+.btn.lav{background:linear-gradient(135deg,var(--lav-deep),#b494ff);box-shadow:0 8px 0 #5d3fa6,0 14px 24px rgba(143,107,217,.3)}
+.btn.lav:active{box-shadow:0 2px 0 #5d3fa6}
+.btn.white{background:#fff;color:var(--cherry);box-shadow:0 8px 0 #e3c3d2,0 14px 24px rgba(0,0,0,.08)}
+.btn.white:active{box-shadow:0 2px 0 #e3c3d2}
+.btn.giant{font-size:clamp(1.1rem,3.6vw,1.6rem);padding:20px 34px}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.center{text-align:center}
+.result{
+  margin:18px auto 0;max-width:640px;min-height:64px;padding:16px 20px;border-radius:20px;
+  background:#fff;font-weight:800;text-align:center;border:3px dashed var(--pink);
+  display:flex;align-items:center;justify-content:center;
+}
+.result.pop{animation:pop .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+
+/* ---------- hero ---------- */
+.hero{padding-top:34px;text-align:center}
+.badge{background:var(--neon);color:#fff;animation:pulseBadge 1.2s ease-in-out infinite;box-shadow:0 0 0 0 rgba(255,23,68,.6)}
+@keyframes pulseBadge{0%{box-shadow:0 0 0 0 rgba(255,23,68,.55)}70%{box-shadow:0 0 0 16px rgba(255,23,68,0)}100%{box-shadow:0 0 0 0 rgba(255,23,68,0)}}
+.hero h1{
+  font-size:clamp(2rem,8vw,4.6rem);font-weight:900;margin:18px 0 8px;
+  background:linear-gradient(90deg,var(--cherry),var(--lav-deep),var(--baby-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 6px 24px rgba(224,25,79,.15);letter-spacing:-.02em;
+}
+.hero .tagline{font-size:clamp(1.05rem,3vw,1.4rem);font-weight:800;color:var(--lav-deep)}
+.hero p.lead{max-width:640px;margin:14px auto 22px;font-weight:600}
+.threat{
+  max-width:620px;margin:0 auto 18px;border-radius:var(--radius);padding:22px;color:#fff;font-weight:900;
+  background:linear-gradient(135deg,var(--neon),#b3002f);position:relative;overflow:hidden;
+  animation:threatPulse 1.4s ease-in-out infinite;
+}
+.threat::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 14px,transparent 14px 28px)}
+.threat>*{position:relative}
+.threat .lvl{font-size:clamp(1.3rem,4.6vw,2.2rem)}
+.threat .warn{margin-top:10px;font-weight:700;font-size:.95rem;background:rgba(0,0,0,.2);padding:10px 14px;border-radius:14px}
+@keyframes threatPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,23,68,.5),var(--shadow)}50%{box-shadow:0 0 36px 8px rgba(255,23,68,.45),var(--shadow)}}
+.siren{display:inline-block;animation:siren 1s ease-in-out infinite}
+@keyframes siren{0%,100%{transform:rotate(-14deg) scale(1)}50%{transform:rotate(14deg) scale(1.2)}}
+body.emergency .hero{animation:emergencyFlash .5s 4}
+@keyframes emergencyFlash{0%,100%{background:transparent}50%{background:rgba(255,23,68,.18)}}
+
+/* ---------- bottle ---------- */
+.bottle-card{text-align:center;transition:transform .2s}
+.bottle-stage{position:relative;width:min(300px,78vw);margin:0 auto}
+#bottle{width:100%;display:block;animation:wobble 3.2s ease-in-out infinite;transform-origin:50% 90%;filter:drop-shadow(0 18px 22px rgba(58,155,224,.3))}
+@keyframes wobble{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+#bottle.shake{animation:shakeBottle .6s ease-in-out}
+@keyframes shakeBottle{0%,100%{transform:rotate(0)}15%{transform:rotate(-12deg) translateX(-6px)}30%{transform:rotate(11deg) translateX(6px)}45%{transform:rotate(-9deg)}60%{transform:rotate(8deg)}80%{transform:rotate(-4deg)}}
+#liquid{transition:y .8s cubic-bezier(.3,1.2,.4,1),height .8s cubic-bezier(.3,1.2,.4,1)}
+.vibrate{animation:vibrate .5s linear}
+@keyframes vibrate{0%,100%{transform:translate(0)}10%{transform:translate(-4px,2px)}20%{transform:translate(4px,-2px)}30%{transform:translate(-5px,-3px)}40%{transform:translate(5px,3px)}50%{transform:translate(-3px,2px)}60%{transform:translate(3px,-2px)}70%{transform:translate(-2px,1px)}80%{transform:translate(2px,-1px)}}
+.bottle-card h3{font-size:clamp(1.3rem,4vw,1.8rem);margin-top:10px;color:var(--cherry)}
+.bottle-card .lead2{font-weight:700;margin:6px auto 14px;max-width:520px}
+
+/* particle layer */
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.drop{position:absolute;width:12px;height:16px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:linear-gradient(#bfe4ff,#3a9be0);opacity:.9;animation:dropFly var(--d,900ms) ease-out forwards}
+.bub{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,rgba(191,228,255,.4));border:1px solid #fff;animation:dropFly var(--d,1100ms) ease-out forwards}
+@keyframes dropFly{
+  0%{transform:translate(0,0) scale(.4);opacity:1}
+  100%{transform:translate(var(--x,0),var(--y,0)) scale(1);opacity:0}
+}
+.fall{position:absolute;top:-40px;animation:fall linear forwards;font-size:24px}
+@keyframes fall{to{transform:translate(var(--sx,0),110vh) rotate(var(--rot,360deg));opacity:.9}}
+.coolflash{position:fixed;inset:0;pointer-events:none;z-index:49;background:radial-gradient(circle,rgba(191,228,255,.85),rgba(120,200,255,.35));opacity:0}
+.coolflash.on{animation:coolflash .9s ease-out}
+@keyframes coolflash{0%{opacity:0}20%{opacity:.7}100%{opacity:0}}
+
+/* ---------- meter ---------- */
+.meter-wrap{max-width:720px;margin:0 auto}
+.meter-num{font-size:clamp(2.6rem,10vw,4.5rem);font-weight:900;text-align:center;color:var(--cherry)}
+.meter-label{text-align:center;font-weight:900;font-size:clamp(1.05rem,3.5vw,1.5rem);min-height:2em}
+.meter-track{height:34px;border-radius:999px;background:#fff;border:3px solid #fff;box-shadow:inset 0 4px 10px rgba(0,0,0,.1);overflow:hidden;margin:12px 0 18px}
+.meter-fill{height:100%;width:50%;border-radius:999px;background:linear-gradient(90deg,#9be7ff,#ffc2dd,#ff5c8a,#ff1744);background-size:400% 100%;transition:width .9s cubic-bezier(.3,1.1,.4,1),background-position .9s}
+.meter-fill.hot{animation:hotPulse .6s ease-in-out infinite}
+@keyframes hotPulse{50%{filter:brightness(1.25)}}
+.meter-note{font-size:.8rem;text-align:center;opacity:.7;margin-top:10px}
+
+/* ---------- timer ---------- */
+.ring-box{position:relative;width:min(260px,70vw);margin:0 auto 10px}
+.ring-box svg{width:100%;transform:rotate(-90deg)}
+.ring-bg{fill:none;stroke:#fff;stroke-width:14}
+.ring-fg{fill:none;stroke:url(#ringGrad);stroke-width:14;stroke-linecap:round;transition:stroke-dashoffset .25s linear}
+.ring-time{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(2.6rem,12vw,4rem);font-weight:900;font-variant-numeric:tabular-nums;color:var(--lav-deep)}
+.timer-msg{min-height:3.2em;text-align:center;font-weight:800;margin:8px auto;max-width:520px}
+
+/* ---------- report ---------- */
+.report{max-width:720px;margin:0 auto;background:#fffdf7;border:3px solid #fff;border-radius:22px;padding:24px;box-shadow:var(--shadow);position:relative;background-image:repeating-linear-gradient(transparent 0 33px,rgba(143,107,217,.12) 33px 34px)}
+.report .stamp{position:absolute;top:14px;right:14px;border:3px solid var(--neon);color:var(--neon);font-weight:900;padding:4px 10px;transform:rotate(10deg);border-radius:10px;font-size:.8rem;opacity:.8}
+.report dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 16px;margin-top:14px}
+.report dt{font-weight:900;color:var(--cherry)}
+.report dd{font-weight:600}
+.report.flip{animation:flipIn .6s ease}
+@keyframes flipIn{0%{transform:rotateX(80deg);opacity:0}100%{transform:rotateX(0);opacity:1}}
+@media(max-width:520px){.report dl{grid-template-columns:1fr;gap:2px}.report dd{margin-bottom:8px}}
+
+/* ---------- treatments ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.treat{
+  text-align:center;padding:22px 14px;border-radius:24px;background:var(--glass);border:2px solid #fff;
+  box-shadow:var(--shadow);font-weight:900;font-size:1.05rem;transition:transform .15s,background .15s;
+}
+.treat:hover{transform:translateY(-5px) rotate(-1deg);background:#fff}
+.treat:active{transform:scale(.94)}
+.treat .em{display:block;font-size:2.6rem;margin-bottom:6px}
+.treat small{display:block;font-weight:700;opacity:.7;margin-top:4px}
+.status-bar{margin-top:18px}
+
+/* frog mode */
+body.frog-mode{background:linear-gradient(160deg,#d7f7c2,#a8e6a1 50%,#8fd9b6);}
+body.frog-mode .hero h1{background:linear-gradient(90deg,#2e8b3d,#6fcf4a);-webkit-background-clip:text;background-clip:text}
+body.frog-mode .btn{background:linear-gradient(135deg,#2e8b3d,#6fcf4a);box-shadow:0 8px 0 #1d5e28}
+body.frog-mode h2{color:#2e8b3d}
+
+/* ---------- relapse ---------- */
+.relapse-card{max-width:680px;margin:0 auto;text-align:center}
+.relapse-out{font-size:clamp(1.2rem,4.5vw,2rem);font-weight:900;color:var(--cherry);min-height:3em;display:flex;align-items:center;justify-content:center}
+.disclaimer{font-size:.8rem;opacity:.7;margin-top:8px;font-weight:700}
+.loadbar{height:14px;background:#fff;border-radius:99px;overflow:hidden;margin:12px auto;max-width:360px;display:none}
+.loadbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--lav-deep),var(--cherry))}
+.loadbar.go{display:block}
+.loadbar.go i{animation:load 1.3s ease-in-out forwards}
+@keyframes load{to{width:100%}}
+
+/* ---------- challenge ---------- */
+.challenge{max-width:680px;margin:0 auto 16px;padding:26px;border-radius:24px;background:linear-gradient(135deg,#fff,var(--pink-soft));text-align:center;font-size:clamp(1.05rem,3.4vw,1.35rem);font-weight:800;min-height:110px;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:var(--shadow)}
+.challenge.swap{animation:swapCard .55s ease}
+@keyframes swapCard{0%{transform:translateX(40px) rotate(4deg);opacity:0}100%{transform:none;opacity:1}}
+
+/* ---------- inventory ---------- */
+.inv{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.inv div.stat{background:#fff;border-radius:22px;padding:18px;text-align:center;box-shadow:var(--shadow)}
+.inv b{display:block;font-size:2rem;color:var(--cherry);font-variant-numeric:tabular-nums}
+.inv span{font-weight:800;font-size:.85rem;opacity:.75}
+.confirm-row{margin-top:14px;text-align:center}
+
+/* ---------- secret ---------- */
+.secret{text-align:center;padding:60px 0 40px}
+.dnp{
+  background:repeating-linear-gradient(45deg,#ffd400 0 16px,#222 16px 32px);color:#fff;
+  font-size:clamp(1rem,3.6vw,1.4rem);font-weight:900;padding:20px 26px;border-radius:18px;
+  text-shadow:0 2px 4px #000,0 0 8px #000;border:4px solid #222;animation:dnpPulse .9s ease-in-out infinite;
+}
+@keyframes dnpPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,23,68,.6)}50%{transform:scale(1.05);box-shadow:0 0 30px 10px rgba(255,23,68,.45)}}
+
+/* ---------- overlays ---------- */
+.overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;text-align:center;overflow-y:auto}
+.overlay.open{display:flex;animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.overlay .box{max-width:620px;width:100%;padding:28px;border-radius:28px;background:rgba(255,255,255,.92);box-shadow:0 20px 60px rgba(0,0,0,.25);position:relative}
+.overlay .big{font-size:clamp(1.3rem,4.6vw,2rem);font-weight:900;margin:10px 0}
+.overlay .emoji-big{font-size:clamp(3.5rem,16vw,6rem)}
+.ov-ice{background:linear-gradient(180deg,rgba(150,215,255,.96),rgba(220,245,255,.96))}
+.ov-grass{background:linear-gradient(180deg,rgba(190,240,255,.96) 0%,rgba(190,240,255,.96) 55%,rgba(104,190,84,.97) 55%)}
+.ov-water{background:linear-gradient(180deg,rgba(230,245,255,.97),rgba(190,225,255,.97))}
+.ov-monk{background:linear-gradient(180deg,#fff3dc,#ffe1c4)}
+.ov-npc{background:#101820;color:#8dff9b;font-family:ui-monospace,Menlo,Consolas,monospace}
+.ov-npc .box{background:#0b1218;border:3px solid #8dff9b;color:#8dff9b}
+.ov-exit{background:rgba(59,31,63,.95)}
+.ov-fin{background:rgba(10,0,10,.88)}
+.ov-fin .box{background:transparent;box-shadow:none;color:#fff}
+.ov-love{background:rgba(255,194,221,.75);backdrop-filter:blur(6px)}
+.ov-generic{background:rgba(59,31,63,.5)}
+.cloud{position:absolute;font-size:5rem;opacity:.85;animation:cloudMove linear infinite}
+@keyframes cloudMove{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
+.snowflake-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.glass{position:relative;width:110px;height:150px;margin:10px auto;border:5px solid #6cc2ff;border-top:none;border-radius:0 0 26px 26px;overflow:hidden;background:rgba(255,255,255,.5)}
+.glass i{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(#8fd4ff,#3a9be0);transition:height 3s ease-in-out}
+.glass.full i{height:92%}
+.grass-row{font-size:2.4rem;letter-spacing:-.1em;animation:sway 1.8s ease-in-out infinite;transform-origin:bottom}
+@keyframes sway{0%,100%{transform:skewX(-6deg)}50%{transform:skewX(6deg)}}
+.pixel{font-size:4rem;animation:glitch .5s steps(2) infinite}
+@keyframes glitch{0%{transform:translate(0)}50%{transform:translate(3px,-2px)}100%{transform:translate(-3px,2px)}}
+.alarm-lights{position:absolute;inset:0;pointer-events:none;animation:alarm .8s ease-in-out infinite}
+@keyframes alarm{0%,100%{box-shadow:inset 0 0 0 rgba(255,23,68,0)}50%{box-shadow:inset 0 0 120px rgba(255,23,68,.55)}}
+.shake-screen{animation:screenShake .5s linear 3}
+@keyframes screenShake{0%,100%{transform:translate(0)}20%{transform:translate(-4px,3px)}40%{transform:translate(4px,-3px)}60%{transform:translate(-3px,-2px)}80%{transform:translate(3px,2px)}}
+.countdown-num{font-size:clamp(5rem,26vw,10rem);font-weight:900;color:#ff3b5f;text-shadow:0 0 30px #ff1744}
+.fin-title{font-size:clamp(1.5rem,6vw,2.8rem);font-weight:900;line-height:1.2;color:#ffd1dc;animation:pop .6s}
+.fin-sub{font-size:clamp(1.1rem,4vw,1.8rem);margin-top:16px;font-weight:800;animation:pop .6s}
+.love-msg{font-size:clamp(1rem,3.2vw,1.2rem);font-weight:700;line-height:1.7;margin:12px 0 18px}
+.love-box{animation:pop .6s}
+
+/* ---------- footer ---------- */
+footer{text-align:center;padding:40px 18px 50px;font-weight:700}
+footer h4{font-size:1.3rem;color:var(--cherry)}
+footer small{display:block;opacity:.65;margin-top:14px;max-width:520px;margin-inline:auto}
+.tiny-heart{background:none;font-size:.7rem;opacity:.22;padding:6px;margin-top:10px;transition:opacity .2s}
+.tiny-heart:hover,.tiny-heart:focus-visible{opacity:.7}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .bg-layer{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Floating background (hearts, stars, bubbles) is generated by JS -->
+<div class="bg-layer" id="bgLayer" aria-hidden="true"></div>
+<div id="fx" aria-hidden="true"></div>
+<div class="coolflash" id="coolflash" aria-hidden="true"></div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="pill badge">🚨 OFFICIAL COUPLE EMERGENCY SYSTEM</span>
+    <h1>ANTI-HORNY EMERGENCY CENTER™</h1>
+    <p class="tagline">Because somebody needs to act normal around here.</p>
+    <p class="lead">Welcome, citizen. Our systems have detected dangerously high levels of flirting, suspicious thoughts, excessive heart-eyes, and an alarming lack of self-control.</p>
+
+    <div class="threat" role="alert">
+      <div class="lvl"><span class="siren">🚨</span> CURRENT THREAT LEVEL: CRITICAL 💀</div>
+      <div class="warn">⚠️ WARNING: This individual has been thinking about their partner for an unreasonable amount of time.</div>
+    </div>
+
+    <button class="btn giant" id="btnHelp">🚨 I NEED IMMEDIATE HELP</button>
+    <button class="btn lav" id="btnInnocent">😇 I'M INNOCENT</button>
+    <div class="result" id="innocentResult" aria-live="polite" hidden></div>
+  </div>
+</header>
+
+<main>
+<!-- ================= SPRAY ================= -->
+<section id="sprayZone">
+  <div class="wrap">
+    <div class="card bottle-card" id="mainCard">
+      <div class="bottle-stage">
+        <svg id="bottle" viewBox="0 0 300 420" role="img" aria-label="Cute cartoon spray bottle labelled Anti-Horny Spray">
+          <defs>
+            <linearGradient id="liqGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#9ad8ff"/><stop offset="1" stop-color="#4aa8ee"/>
+            </linearGradient>
+            <clipPath id="bodyClip"><rect x="60" y="150" width="180" height="245" rx="46"/></clipPath>
+          </defs>
+          <!-- nozzle & trigger -->
+          <rect x="105" y="95" width="80" height="40" rx="12" fill="#e0194f"/>
+          <rect x="85" y="60" width="130" height="40" rx="18" fill="#ff5c8a"/>
+          <rect x="30" y="64" width="62" height="22" rx="11" fill="#e0194f"/>
+          <circle cx="36" cy="75" r="5" fill="#fff"/>
+          <path d="M200 100 q50 5 38 62 q-8 -34 -38 -34z" fill="#c4153f"/>
+          <rect x="115" y="125" width="70" height="30" rx="8" fill="#d9c8ff"/>
+          <!-- body -->
+          <rect x="60" y="150" width="180" height="245" rx="46" fill="#fff" fill-opacity=".75" stroke="#fff" stroke-width="6"/>
+          <g clip-path="url(#bodyClip)">
+            <rect id="liquid" x="60" y="150" width="180" height="245" fill="url(#liqGrad)"/>
+            <ellipse cx="150" cy="150" rx="90" ry="7" fill="#d4efff" id="liqTop" opacity=".8"/>
+          </g>
+          <rect x="60" y="150" width="180" height="245" rx="46" fill="none" stroke="#bfe4ff" stroke-width="6"/>
+          <!-- level ticks -->
+          <g stroke="#fff" stroke-width="3" opacity=".9"><line x1="214" y1="190" x2="234" y2="190"/><line x1="224" y1="240" x2="234" y2="240"/><line x1="214" y1="290" x2="234" y2="290"/><line x1="224" y1="340" x2="234" y2="340"/></g>
+          <!-- label -->
+          <rect x="78" y="222" width="144" height="92" rx="16" fill="#fff0f6" stroke="#ff9cbc" stroke-width="3"/>
+          <text x="150" y="246" text-anchor="middle" font-size="13" font-weight="900" fill="#e0194f" font-family="sans-serif">ANTI-HORNY</text>
+          <text x="150" y="262" text-anchor="middle" font-size="13" font-weight="900" fill="#e0194f" font-family="sans-serif">SPRAY™</text>
+          <text x="150" y="282" text-anchor="middle" font-size="8" fill="#3b1f3f" font-weight="700" font-family="sans-serif">100% scientifically</text>
+          <text x="150" y="293" text-anchor="middle" font-size="8" fill="#3b1f3f" font-weight="700" font-family="sans-serif">questionable.</text>
+          <text x="98" y="308" font-size="12">💗</text><text x="190" y="308" font-size="12">❄️</text>
+          <!-- face -->
+          <g id="faceNormal">
+            <circle cx="115" cy="188" r="10" fill="#3b1f3f"/><circle cx="185" cy="188" r="10" fill="#3b1f3f"/>
+            <circle cx="118" cy="184" r="3.5" fill="#fff"/><circle cx="188" cy="184" r="3.5" fill="#fff"/>
+            <ellipse cx="97" cy="204" rx="11" ry="6" fill="#ff9cbc" opacity=".8"/><ellipse cx="203" cy="204" rx="11" ry="6" fill="#ff9cbc" opacity=".8"/>
+            <path d="M135 202 q15 16 30 0" stroke="#3b1f3f" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </g>
+          <text id="faceFrog" x="150" y="215" text-anchor="middle" font-size="64" style="display:none">🐸</text>
+          <text x="40" y="150" font-size="18">✨</text><text x="250" y="200" font-size="18">✨</text>
+        </svg>
+      </div>
+      <h3>Feeling a little too powerful today?</h3>
+      <p class="lead2">Deploy the emergency cooling system before you embarrass yourself in the chat.</p>
+      <button class="btn blue giant" id="btnSpray">💦 SPRAY ME BACK TO NORMAL</button>
+      <div class="result" id="sprayResult" aria-live="polite">Awaiting patient... 🧴</div>
+      <div class="disclaimer" id="liquidText">Liquid level: 100%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METER ================= -->
+<section id="meterZone">
+  <div class="wrap">
+    <h2>CURRENT LEVEL OF UNNECESSARY FLIRTING</h2>
+    <p class="sub">Live readings from our totally real instruments.</p>
+    <div class="card meter-wrap">
+      <div class="meter-num" id="meterNum" aria-live="polite">0%</div>
+      <div class="meter-label" id="meterLabel"></div>
+      <div class="meter-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Fictional flirting level" id="meterBar">
+        <div class="meter-fill" id="meterFill"></div>
+      </div>
+      <div class="center">
+        <button class="btn" id="btnText">I JUST RECEIVED A TEXT FROM THEM 📱</button>
+        <button class="btn lav" id="btnResp">REMEMBER YOUR RESPONSIBILITIES 🧍</button>
+      </div>
+      <div class="result" id="meterResult" aria-live="polite" hidden></div>
+      <p class="meter-note">Fictional game value only. Nothing is detected, tracked, or sent anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMER ================= -->
+<section id="timerZone">
+  <div class="wrap">
+    <h2>THE 30-SECOND TOUCH-GRASS PROTOCOL 🌱</h2>
+    <p class="sub">Mandatory recovery period after excessive flirting.</p>
+    <div class="card center">
+      <div class="ring-box">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f6bd9"/><stop offset="1" stop-color="#ff5c8a"/></linearGradient></defs>
+          <circle class="ring-bg" cx="60" cy="60" r="52"/>
+          <circle class="ring-fg" id="ringFg" cx="60" cy="60" r="52"/>
+        </svg>
+        <div class="ring-time" id="timerText" role="timer" aria-live="off">00:30</div>
+      </div>
+      <div class="timer-msg" id="timerMsg" aria-live="polite">Press start when you are ready to be a functional adult.</div>
+      <button class="btn" id="tStart">START COOLDOWN</button>
+      <button class="btn lav" id="tPause">PAUSE</button>
+      <button class="btn white" id="tReset">RESET</button>
+      <div id="tDone" hidden>
+        <div class="result" aria-live="polite" style="font-size:1.1rem">🎉 CONGRATULATIONS! YOU HAVE SURVIVED 30 SECONDS OF BEING NORMAL.</div>
+        <button class="btn giant" id="btnMiss">UNFORTUNATELY, I MISS THEM NOW 💗</button>
+        <div class="result" id="missResult" aria-live="polite" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIAGNOSIS ================= -->
+<section id="diagZone">
+  <div class="wrap">
+    <h2>CONFIDENTIAL PATIENT REPORT 📝</h2>
+    <p class="sub">Stamped, signed, and entirely made up.</p>
+    <div class="report" id="report">
+      <div class="stamp">TOP SECRET*</div>
+      <dl id="reportList"></dl>
+    </div>
+    <div class="center" style="margin-top:18px"><button class="btn" id="btnDiag">🔬 GENERATE MY DIAGNOSIS</button></div>
+  </div>
+</section>
+
+<!-- ================= TREATMENTS ================= -->
+<section id="treatZone">
+  <div class="wrap">
+    <h2>EMERGENCY TREATMENT CENTER 🏥</h2>
+    <p class="sub">Pick your poison. Every treatment is 100% non-FDA approved.</p>
+    <div class="grid" id="treatGrid">
+      <button class="treat" data-t="ice"><span class="em">🧊</span>ICE-BATH MODE<small>Brrrr.</small></button>
+      <button class="treat" data-t="normal"><span class="em">🧠</span>ACT NORMAL<small>Instructions included.</small></button>
+      <button class="treat" data-t="grass"><span class="em">📵</span>TOUCH GRASS<small>10-second mini cooldown.</small></button>
+      <button class="treat" data-t="water"><span class="em">💧</span>DRINK WATER<small>Hydrate or diedrate.</small></button>
+      <button class="treat" data-t="frog"><span class="em">🐸</span>BECOME FROG<small>Ribbit.</small></button>
+      <button class="treat" data-t="monk"><span class="em">🧘</span>BUDDHIST MONK MODE<small>Inner peace (pending).</small></button>
+      <button class="treat" data-t="npc"><span class="em">🧍</span>NPC MODE<small>Loading...</small></button>
+      <button class="treat" data-t="exit"><span class="em">🚪</span>EXIT THE CHAT<small>Brave, but temporary.</small></button>
+    </div>
+    <div class="result" id="treatResult" aria-live="polite">Select a treatment to begin recovery. 💊</div>
+  </div>
+</section>
+
+<!-- ================= RELAPSE ================= -->
+<section id="relapseZone">
+  <div class="wrap">
+    <div class="card relapse-card">
+      <h2>HOW LONG UNTIL YOU RELAPSE? 💀</h2>
+      <p class="sub">The system has studied absolutely nothing and reached a conclusion anyway.</p>
+      <div class="loadbar" id="loadbar"><i></i></div>
+      <div class="relapse-out result" id="relapseOut" aria-live="polite">Awaiting prediction...</div>
+      <button class="btn" id="btnRelapse">PREDICT MY RELAPSE</button>
+      <p class="disclaimer">Prediction accuracy: scientifically nonexistent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHALLENGES ================= -->
+<section id="challengeZone">
+  <div class="wrap">
+    <h2>EMERGENCY DISTRACTION CENTER 💗</h2>
+    <p class="sub">Replace the flirting with something cute. Doctor's orders.</p>
+    <div class="challenge" id="challengeCard" aria-live="polite">Press the button for your mission, agent. 🎯</div>
+    <div class="center">
+      <button class="btn" id="btnChallenge">🎲 GIVE ME A RANDOM CHALLENGE</button>
+      <button class="btn lav" id="btnCopy">💌 COPY A CUTE MESSAGE</button>
+    </div>
+    <div class="result" id="copyResult" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<!-- ================= INVENTORY ================= -->
+<section id="invZone">
+  <div class="wrap">
+    <h2>THE SPRAY INVENTORY 📦</h2>
+    <p class="sub">Harmless game stats, saved only in this browser.</p>
+    <div class="inv">
+      <div class="stat"><b id="stSprays">0</b><span>TOTAL SPRAYS USED</span></div>
+      <div class="stat"><b id="stMood">0%</b><span>CURRENT MOOD LEVEL</span></div>
+      <div class="stat"><b id="stCool">0</b><span>COMPLETED COOLDOWNS</span></div>
+      <div class="stat"><b id="stStatus" style="font-size:1.2rem;padding:10px 0">Unstable</b><span>TREATMENT STATUS</span></div>
+    </div>
+    <div class="confirm-row">
+      <button class="btn white" id="btnReset">RESET ALL STATS</button>
+      <span id="confirmBox" hidden>
+        <span style="font-weight:800">Really reset everything?</span>
+        <button class="btn" id="btnResetYes">YES, WIPE IT</button>
+        <button class="btn lav" id="btnResetNo">NO, KEEP IT</button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECRET BUTTON ================= -->
+<section class="secret">
+  <div class="wrap">
+    <button class="dnp" id="btnDnp">⚠️ DO NOT PRESS UNDER ANY CIRCUMSTANCES</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <h4>ANTI-HORNY EMERGENCY CENTER™</h4>
+  <p>An entirely fictional organization with absolutely no medical qualifications.</p>
+  <p>Made with questionable science, excessive affection, and 100% unnecessary drama. 💗</p>
+  <small>This is a fictional couples' joke website. The mood meter, diagnosis, and treatments are for entertainment only.</small>
+  <button class="tiny-heart" id="tinyHeart" aria-label="Tiny heart (a very small secret)">💗</button>
+</footer>
+
+<!-- ============ GENERIC OVERLAY (treatments, final boss) ============ -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+  <div class="box" id="ovBox"></div>
+</div>
+
+<!-- ============ SECRET ROMANTIC MODAL ============ -->
+<div class="overlay ov-love" id="loveModal" role="dialog" aria-modal="true" aria-labelledby="loveTitle">
+  <div class="box love-box">
+    <div class="emoji-big">💗</div>
+    <h3 id="loveTitle" style="color:var(--cherry);font-size:1.8rem">Okay, jokes aside... 💗</h3>
+    <p class="love-msg" id="loveMsg"></p>
+    <button class="btn" id="btnLoveClose">BACK TO BEING MENACES 😭</button>
+  </div>
+</div>
+
+<script>
+/* ==========================================================
+   ✏️  CUSTOMIZE ME ✏️
+   Change the nickname and the romantic message below.
+   Use {nickname} anywhere in the message to insert it.
+   ========================================================== */
+const PARTNER_NICKNAME = "my love";
+const ROMANTIC_MESSAGE =
+  "Even though this website is trying its absolute best to make us act normal, the truth is that I love talking to you. " +
+  "You make ordinary moments feel special, and you are one of my favorite reasons to smile. " +
+  "The spray might cool the mood, but it cannot make me care about you any less. " +
+  "Now please stop being so cute, {nickname}. My emergency system is already struggling. 😭💗";
+
+/* ==========================================================
+   Helpers & state
+   ========================================================== */
+const $ = id => document.getElementById(id);
+const rand = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const STORE_KEY = 'ahec_stats_v1';
+
+const state = { sprays: 0, mood: rand(45, 95), cooldowns: 0, status: 'Unstable', liquid: 100 };
+
+// Load harmless stats (never anything personal)
+(function load(){
+  try{
+    const s = JSON.parse(localStorage.getItem(STORE_KEY) || 'null');
+    if(s){ state.sprays = s.sprays|0; state.cooldowns = s.cooldowns|0; if(typeof s.liquid==='number') state.liquid = Math.min(100,Math.max(5,s.liquid)); }
+  }catch(e){}
+})();
+function save(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({sprays:state.sprays,cooldowns:state.cooldowns,liquid:state.liquid})); }catch(e){}
+}
+function say(el, text){            // stylish in-page message with pop animation
+  el.hidden = false; el.textContent = text;
+  el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+}
+function setStatus(s){ state.status = s; renderInventory(); }
+
+/* ---------- background decoration ---------- */
+(function bg(){
+  if(reduceMotion) return;
+  const layer = $('bgLayer'); const icons = ['💗','💖','✨','⭐','💕','🫧'];
+  for(let i=0;i<26;i++){
+    const s = document.createElement('span');
+    if(i%4===0){ const sz = rand(14,40); s.className='bubble'; s.style.width=s.style.height=sz+'px'; }
+    else { s.textContent = pick(icons); s.style.fontSize = rand(14,30)+'px'; }
+    s.style.left = rand(0,98)+'%';
+    s.style.animationDuration = rand(12,28)+'s';
+    s.style.animationDelay = (-rand(0,25))+'s';
+    layer.appendChild(s);
+  }
+})();
+
+/* ---------- particles ---------- */
+function spraySplash(){
+  if(reduceMotion) return;
+  const fx = $('fx'); const r = $('bottle').getBoundingClientRect();
+  const ox = r.left + r.width*0.12, oy = r.top + r.height*0.18;
+  for(let i=0;i<34;i++){
+    const d = document.createElement('div');
+    const bubble = i%3===0;
+    d.className = bubble ? 'bub' : 'drop';
+    if(bubble){ const sz = rand(10,26); d.style.width=d.style.height=sz+'px'; }
+    d.style.left = ox+'px'; d.style.top = oy+'px';
+    d.style.setProperty('--x', (-rand(80,320))+'px');
+    d.style.setProperty('--y', (rand(-100,160))+'px');
+    d.style.setProperty('--d', rand(700,1300)+'ms');
+    fx.appendChild(d);
+    setTimeout(()=>d.remove(), 1400);
+  }
+}
+function rain(chars, count){
+  if(reduceMotion) return;
+  const fx = $('fx');
+  for(let i=0;i<count;i++){
+    const f = document.createElement('div');
+    f.className='fall'; f.textContent = pick(chars);
+    f.style.left = rand(0,98)+'vw';
+    f.style.fontSize = rand(16,34)+'px';
+    f.style.setProperty('--sx', rand(-60,60)+'px');
+    f.style.setProperty('--rot', rand(-540,540)+'deg');
+    f.style.animationDuration = rand(2200,4200)+'ms';
+    f.style.animationDelay = rand(0,700)+'ms';
+    fx.appendChild(f);
+    setTimeout(()=>f.remove(), 5200);
+  }
+}
+function coolFlash(){
+  const c = $('coolflash'); c.classList.remove('on'); void c.offsetWidth; c.classList.add('on');
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+$('btnHelp').addEventListener('click', ()=>{
+  $('sprayZone').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+  document.body.classList.remove('emergency'); void document.body.offsetWidth; document.body.classList.add('emergency');
+  setTimeout(()=>document.body.classList.remove('emergency'), 2200);
+  rain(['🚨','💦','🧊'], 14);
+  say($('sprayResult'), '🚨 EMERGENCY RECEIVED. The spray bottle is on its way (it is already right here).');
+});
+const accusations = [
+  'LIAR DETECTED. Deploying emotional support immediately.',
+  'Your browser history says otherwise. (Just kidding.)',
+  'Innocence level: 0.0001%.',
+  'The court rejects your statement due to excessive heart emojis.',
+  'Your partner has been notified by absolutely nobody. Relax. 😭'
+];
+$('btnInnocent').addEventListener('click', ()=> say($('innocentResult'), pick(accusations)));
+
+/* ==========================================================
+   BOTTLE & SPRAY
+   ========================================================== */
+const sprayResults = [
+  '💦 DIRECT HIT! One brain cell has regained consciousness.',
+  '🧊 TEMPERATURE REDUCED. Unfortunately, thoughts of your partner remain.',
+  '🚿 EMERGENCY COOLING SUCCESSFUL. Normal behavior restored for approximately 7 seconds.',
+  '💀 CRITICAL ERROR: Your partner is still too attractive.',
+  '❄️ COOLING COMPLETE. Please avoid opening your chat for scientific reasons.',
+  'Treatment complete. Side effect: missing your partner even more.',
+  'The spray has worked. Unfortunately, your imagination has not received the update.',
+  'Patient stabilized. Doctor recommends drinking water and acting innocent.',
+  'Cooling system engaged. Flirting relapse expected in 00:00:07.'
+];
+const cooldownTips = [
+  'Nurse says: breathe in for 4, out for 4, think about nothing (impossible).',
+  'Reminder: your phone is not a person. Put it down gently.',
+  'Fun fact: ice cubes are not a love language.',
+  'The bottle is judging you lovingly.',
+  'Cooling tip: pretend the chat is a tax form.',
+  'Please blink. Blinking is cute but also necessary.'
+];
+function renderLiquid(){
+  const top = 150, h = 245;
+  const lvl = state.liquid / 100;
+  const newH = h * lvl;
+  const l = $('liquid');
+  l.setAttribute('y', top + (h - newH)); l.setAttribute('height', newH);
+  $('liqTop').setAttribute('cy', top + (h - newH));
+  $('liquidText').textContent = 'Liquid level: ' + Math.round(state.liquid) + '%';
+}
+$('btnSpray').addEventListener('click', ()=>{
+  // 1. spray animation  2. shake  3. cool flash  4. card vibrate
+  spraySplash();
+  const b = $('bottle'); b.classList.remove('shake'); void b.getBoundingClientRect(); b.classList.add('shake');
+  setTimeout(()=>b.classList.remove('shake'), 650);
+  coolFlash();
+  const card = $('mainCard'); card.classList.remove('vibrate'); void card.offsetWidth; card.classList.add('vibrate');
+  // 5/9. message  7. counter  8. liquid
+  say($('sprayResult'), pick(sprayResults) + '  ' + pick(cooldownTips));
+  state.sprays++;
+  state.liquid -= rand(6,10);
+  if(state.liquid <= 10){
+    state.liquid = 100;
+    setTimeout(()=>say($('sprayResult'), '🧴 Bottle empty! Refilled automatically by the Department of Questionable Supplies.'), 1800);
+  }
+  renderLiquid();
+  setStatus('Cooling in progress ❄️');
+  // 6. lower meter
+  changeMood(-rand(15,30), true);
+  // 10. snowflakes
+  rain(['❄️','💙','🫧','✨'], 22);
+  save();
+});
+
+/* ==========================================================
+   MOOD METER
+   ========================================================== */
+const levels = [
+  [20,'ANGEL MODE 😇'],[40,'SLIGHTLY SUSPICIOUS 👀'],[60,'FLIRTING DETECTED 💗'],
+  [80,'SOMEONE NEEDS WATER 🥵'],[99,'NATIONAL EMERGENCY 🚨'],[100,'THE GOVERNMENT HAS BEEN INFORMED 💀']
+];
+function levelLabel(v){ for(const [max,t] of levels) if(v<=max) return t; return levels[5][1]; }
+const hundredMsgs = [
+  '🚨 MAXIMUM FLIRTATION REACHED. The government has been informed. They sighed.',
+  '💀 100%! Sirens are ringing. Even the spray bottle is blushing.',
+  '🚨 CODE PINK. Please step away from the keyboard with your hands visible.'
+];
+function changeMood(delta, quiet){
+  const before = state.mood;
+  state.mood = Math.max(0, Math.min(100, state.mood + delta));
+  renderMeter();
+  if(state.mood >= 100 && before < 100){
+    say($('meterResult'), pick(hundredMsgs));
+    document.body.classList.remove('emergency'); void document.body.offsetWidth; document.body.classList.add('emergency');
+    setTimeout(()=>document.body.classList.remove('emergency'), 2200);
+    rain(['🚨','💀','💗'], 18);
+  } else if(state.mood === 0 && before > 0){
+    say($('meterResult'), 'Congratulations. You are now legally required to behave normally. For the next 12 seconds.');
+    rain(['😇','✨','🌱'], 16);
+  } else if(!quiet){
+    $('meterResult').hidden = true;
+  }
+}
+function renderMeter(){
+  const v = Math.round(state.mood);
+  $('meterNum').textContent = v + '%';
+  $('meterLabel').textContent = levelLabel(v);
+  $('meterFill').style.width = v + '%';
+  $('meterFill').style.backgroundPosition = (v) + '% 0';
+  $('meterFill').classList.toggle('hot', v >= 81);
+  const bar = $('meterBar'); bar.setAttribute('aria-valuenow', v);
+  renderInventory();
+}
+const textReactions = ['📱 Notification received. Pulse: elevated.','📱 They said "hi". Systems are panicking.','📱 A cute emoji has been detected. Stay calm.'];
+$('btnText').addEventListener('click', ()=>{
+  changeMood(rand(8,25), true);
+  if(state.mood < 100) say($('meterResult'), pick(textReactions));
+  setStatus('Compromised 📱');
+});
+$('btnResp').addEventListener('click', ()=>{
+  changeMood(-rand(3,10), true);
+  if(state.mood > 0) say($('meterResult'), pick(['🧍 You remembered you have responsibilities. Briefly.','🧍 Laundry exists. Taxes exist. Be strong.','🧍 Standing up straight. Looking serious. Failing slightly.']));
+});
+
+/* ==========================================================
+   COOLDOWN TIMER  (single interval, always cleared)
+   ========================================================== */
+const TOTAL_MS = 30000, CIRC = 2 * Math.PI * 52;
+const timerMsgs = [
+  'Take a deep breath. You are not in a romance movie.',
+  'Drink water. Your keyboard has suffered enough.',
+  'Look at a wall and remember that you have responsibilities.',
+  'Please stop smiling at your phone like that.',
+  'Your screen time report is filing a complaint.',
+  'Remember: being cute is not a recognized emergency.',
+  'The medical team recommends one normal thought.',
+  'Blink twice if you need professional assistance from the spray bottle.'
+];
+let tInterval = null, tRemaining = TOTAL_MS, tEnd = 0, tMsgIdx = 0;
+const ringFg = $('ringFg'); ringFg.style.strokeDasharray = CIRC;
+function renderTimer(){
+  const secs = Math.ceil(tRemaining/1000);
+  $('timerText').textContent = '00:' + String(Math.max(0,secs)).padStart(2,'0');
+  ringFg.style.strokeDashoffset = CIRC * (1 - tRemaining/TOTAL_MS);
+}
+function stopTimer(){ if(tInterval){ clearInterval(tInterval); tInterval = null; } }
+function tick(){
+  tRemaining = Math.max(0, tEnd - Date.now());
+  renderTimer();
+  const idx = Math.floor((TOTAL_MS - tRemaining) / 3750) % timerMsgs.length;
+  if(idx !== tMsgIdx){ tMsgIdx = idx; $('timerMsg').textContent = timerMsgs[idx]; }
+  if(tRemaining <= 0){
+    stopTimer();
+    state.cooldowns++; save(); setStatus('Temporarily normal 🌱');
+    $('timerMsg').textContent = 'Recovery complete. Please do not celebrate too hard.';
+    $('tDone').hidden = false; $('missResult').hidden = true;
+    $('tStart').disabled = false;
+    rain(['🎉','🌱','✨','💚'], 24);
+    renderInventory();
+  }
+}
+$('tStart').addEventListener('click', ()=>{
+  if(tInterval) return;                       // prevent duplicate intervals
+  if(tRemaining <= 0 || tRemaining === TOTAL_MS){ tRemaining = TOTAL_MS; tMsgIdx = 0; $('timerMsg').textContent = timerMsgs[0]; $('tDone').hidden = true; }
+  tEnd = Date.now() + tRemaining;
+  tInterval = setInterval(tick, 200);
+  setStatus('Touching grass 🌱');
+});
+$('tPause').addEventListener('click', ()=>{
+  if(!tInterval) return;
+  stopTimer(); tRemaining = Math.max(0, tEnd - Date.now()); renderTimer();
+  $('timerMsg').textContent = 'Paused. The flirting is gathering strength...';
+});
+$('tReset').addEventListener('click', ()=>{
+  stopTimer(); tRemaining = TOTAL_MS; tMsgIdx = 0; renderTimer();
+  $('tDone').hidden = true;
+  $('timerMsg').textContent = 'Timer reset. Press start when you are ready to be a functional adult.';
+});
+const missJokes = [
+  'Side effect confirmed: you now miss them 14% more than before the cooldown. 💗',
+  'Doctor\'s note: 30 seconds of normal behavior is the maximum safe dose.',
+  'Breaking news: local person survives half a minute, immediately asks "what are they doing?"',
+  'The cooldown worked perfectly. It just made you realize how cute they are. 😭'
+];
+$('btnMiss').addEventListener('click', ()=>{
+  changeMood(rand(10,25), true);
+  say($('missResult'), pick(missJokes));
+  setStatus('Relapsing 💗');
+  rain(['💗','💕','💖'], 18);
+});
+renderTimer();
+
+/* ==========================================================
+   DIAGNOSIS
+   ========================================================== */
+const diag = {
+  condition:['Severe Cuteness Exposure','Advanced Heart-Eyes Syndrome','Chronic Girlfriend-Induced Distraction','Boyfriend Brain Malfunction','Terminal Simping (Highly Contagious)','Uncontrollable Smiling Disorder','Romantic Delusion With Excellent Taste','Acute Notification Addiction','Chronic Partner Obsession'],
+  symptoms:['Smiling at notifications, rereading messages, excessive heart emojis','Staring into space, typing then deleting "hi" six times','Sudden giggling, checking if they are online every nine seconds','Saying "I\'m fine" while visibly not fine','Opening the chat, closing the chat, opening the chat'],
+  severity:['Emotionally compromised','Dangerously smitten','Beyond help, but cute about it','Mildly unhinged','Critical (in a good way)'],
+  recovery:['0% if the partner sends "I miss you."','12% if they stop being adorable (unlikely).','3%, and only during nap time.','Unknown. The doctor got distracted thinking about their own partner.','-40%. Somehow it got worse.'],
+  treatment:['Water, deep breathing, 30 seconds of normal behavior.','One spray to the face and a long stare at a wall.','Touch grass, eat a snack, send a wholesome compliment.','Ice-bath mode followed by a frog break.','Act normal. If that fails, act like a frog.'],
+  prognosis:['Will probably flirt again in five minutes.','Will relapse upon the next "hey you."','Long, happy, and slightly embarrassing.','Excellent, provided heart emojis are rationed.','Dangerously cute outlook.']
+};
+const labels = {condition:'Condition',symptoms:'Symptoms',severity:'Severity',recovery:'Recovery chance',treatment:'Recommended treatment',prognosis:'Long-term prognosis'};
+function genDiag(first){
+  const dl = $('reportList'); dl.innerHTML = '';
+  const defaults = {condition:diag.condition[8],symptoms:diag.symptoms[0],severity:diag.severity[0],recovery:diag.recovery[0],treatment:diag.treatment[0],prognosis:diag.prognosis[0]};
+  Object.keys(labels).forEach(k=>{
+    const dt = document.createElement('dt'), dd = document.createElement('dd');
+    dt.textContent = labels[k] + ':'; dd.textContent = first ? defaults[k] : pick(diag[k]);
+    dl.append(dt, dd);
+  });
+  const r = $('report'); r.classList.remove('flip'); void r.offsetWidth; r.classList.add('flip');
+}
+$('btnDiag').addEventListener('click', ()=>{ genDiag(false); setStatus('Diagnosed 📝'); });
+genDiag(true);
+
+/* ==========================================================
+   TREATMENTS  (shared overlay)
+   ========================================================== */
+const overlay = $('overlay'), ovBox = $('ovBox');
+let ovCleanup = null, lastFocus = null, ovTimeouts = [];
+function ovLater(fn, ms){ const t = setTimeout(fn, ms); ovTimeouts.push(t); return t; }
+function openOverlay(cls, html, closeLabel){
+  closeOverlay(true);
+  lastFocus = document.activeElement;
+  overlay.className = 'overlay open ' + cls;
+  ovBox.innerHTML = html + '<div><button class="btn" id="ovClose">' + (closeLabel || 'OK, I FEEL BETTER') + '</button></div>';
+  $('ovClose').addEventListener('click', ()=>closeOverlay());
+  $('ovClose').focus();
+}
+function closeOverlay(silent){
+  ovTimeouts.forEach(clearTimeout); ovTimeouts = [];
+  if(ovCleanup){ ovCleanup(); ovCleanup = null; }
+  overlay.className = 'overlay'; ovBox.innerHTML = '';
+  document.body.classList.remove('shake-screen');
+  if(!silent && lastFocus && lastFocus.focus) lastFocus.focus();
+}
+document.addEventListener('keydown', e=>{
+  if(e.key !== 'Escape') return;
+  if(overlay.classList.contains('open') && overlay.dataset.lock !== '1') closeOverlay();
+  if($('loveModal').classList.contains('open')) closeLove();
+});
+// click outside a box closes (except the locked final-boss sequence)
+overlay.addEventListener('click', e=>{ if(e.target === overlay && overlay.dataset.lock !== '1') closeOverlay(); });
+
+const iceJokes = ['Why did the flirt go to the freezer? To chill out. (It did not work.)','You are now an ice cube. Sadly, ice cubes still miss people.','This ice bath is cold. Your thoughts are still warm. Impressive.','Frozen solid, but your heart is still on airplane mode.'];
+const normalTips = [
+  'Open your phone, stare at the screen, and pretend you are reading important government documents.',
+  'Walk slowly into the kitchen and examine a spoon like a scientist.',
+  'Say "interesting" out loud to nobody and nod seriously.',
+  'Think about spreadsheets. Think hard. Do not think about their smile.',
+  'Fold a piece of paper and say "this is how adults do it."',
+  'Practice your neutral face in the mirror. If it turns into a smile, start again.'
+];
+const waterJokes = ['Hydration level improved. Flirting level pending.','Glass filled. Brain slightly rinsed.','Water: the only thing allowed to be this wet right now. (Please drink it.)','Fun fact: you can\'t send a heart emoji while drinking. Probably.'];
+const treatActions = {
+  ice(){
+    setStatus('Ice-bathed 🧊');
+    openOverlay('ov-ice',
+      '<div class="emoji-big">🧊</div><div class="big" id="ovTitle">ICE-BATH MODE ACTIVATED</div><p style="font-weight:800">' + pick(iceJokes) + '</p>', 'THAW ME');
+    coolFlash(); rain(['❄️','🧊','💙'], 40);
+    changeMood(-rand(8,15), true);
+    return '🧊 Ice-bath engaged. Brr.';
+  },
+  normal(){
+    setStatus('Pretending 🧠');
+    changeMood(-rand(3,8), true);
+    return '🧠 ' + pick(normalTips);
+  },
+  grass(){
+    setStatus('Touching grass 📵');
+    openOverlay('ov-grass',
+      '<div class="emoji-big">🌿</div><div class="big" id="ovTitle">TOUCH GRASS: MINI COOLDOWN</div>' +
+      '<div class="grass-row" aria-hidden="true">🌱🌿🌾🌱🌿🌾🌱🌿</div>' +
+      '<div class="big" id="grassCount" style="font-variant-numeric:tabular-nums">10</div>' +
+      '<p style="font-weight:800" id="grassMsg">Step away from the chat. The grass is very patient.</p>', 'I GAVE UP');
+    let n = 10; const gc = $('grassCount');
+    const iv = setInterval(()=>{
+      n--; gc.textContent = n;
+      if(n <= 0){
+        clearInterval(iv); ovCleanup = null;
+        $('grassMsg').textContent = '🎉 Mini cooldown complete. Grass touched (spiritually).';
+        gc.textContent = '🌱';
+        changeMood(-rand(5,12), true); rain(['🌱','🌿','✨'], 14);
+      }
+    }, 1000);
+    ovCleanup = ()=>clearInterval(iv);        // always cleared when overlay closes
+    return '📵 Grass deployed. Ten seconds of fresh air.';
+  },
+  water(){
+    setStatus('Hydrated 💧');
+    openOverlay('ov-water',
+      '<div class="emoji-big">💧</div><div class="big" id="ovTitle">DRINK WATER</div>' +
+      '<div class="glass" id="glass" aria-hidden="true"><i></i></div><p style="font-weight:800">' + pick(waterJokes) + '</p>', 'GLUG GLUG');
+    ovLater(()=>{ const g = $('glass'); if(g) g.classList.add('full'); }, 100);
+    changeMood(-rand(4,9), true);
+    return '💧 Hydration protocol complete.';
+  },
+  frog(){
+    const on = document.body.classList.toggle('frog-mode');
+    $('faceFrog').style.display = on ? '' : 'none';
+    $('faceNormal').style.display = on ? 'none' : '';
+    if(on){
+      setStatus('Frog 🐸'); rain(['🐸','🪷','🐸'], 22);
+      changeMood(-rand(5,12), true);
+      return '🐸 You are now a frog. Romantic thoughts have been temporarily replaced by pond management. (Click again to become human.)';
+    }
+    setStatus('Human again 🧍');
+    return '🧍 You have returned to human form. The romantic thoughts are back. Sorry.';
+  },
+  monk(){
+    setStatus('Enlightened 🧘');
+    let clouds = '';
+    for(let i=0;i<5;i++) clouds += '<span class="cloud" aria-hidden="true" style="top:' + rand(4,80) + '%;animation-duration:' + rand(14,26) + 's;animation-delay:-' + rand(0,20) + 's;font-size:' + rand(3,6) + 'rem">☁️</span>';
+    openOverlay('ov-monk', clouds + '<div style="position:relative"><div class="emoji-big">🧘</div><div class="big" id="ovTitle">BUDDHIST MONK MODE</div><p class="big" style="font-size:1.2rem">Observe the thought. Release the thought. Stop opening their chat.</p></div>', 'NAMASTE');
+    changeMood(-rand(6,14), true);
+    return '🧘 Inner peace loaded at 3%. Please wait.';
+  },
+  npc(){
+    setStatus('NPC 🧍');
+    openOverlay('ov-npc',
+      '<div class="pixel" aria-hidden="true">🧍</div><div class="big" id="ovTitle">NPC MODE</div>' +
+      '<pre style="white-space:pre-wrap;font-size:1rem;text-align:left;margin:10px 0">&gt; Loading normal human behavior...\n&gt; [██████░░░░] 60%\n&gt; [████████░░] 80%\n&gt; ERROR: partner.exe is too cute\n&gt; Loading normal human behavior... FAILED.</pre>' +
+      '<p>"Greetings, fellow citizen. I enjoy weather and taxes."</p>', 'RESPAWN');
+    changeMood(-rand(3,9), true);
+    return '🧍 Loading normal human behavior... FAILED.';
+  },
+  exit(){
+    setStatus('Away from chat 🚪');
+    openOverlay('ov-exit',
+      '<div class="emoji-big">🚪</div><div class="big" id="ovTitle">Recommendation: Close the chat for 10 seconds.</div><p style="font-weight:700">(We will not close anything for you. You are strong enough to do it yourself.)</p>', 'FINE, I WILL');
+    changeMood(-rand(3,8), true);
+    return '🚪 The exit is that way. Ten seconds. You can do it.';
+  }
+};
+$('treatGrid').addEventListener('click', e=>{
+  const b = e.target.closest('.treat'); if(!b) return;
+  b.animate([{transform:'scale(1)'},{transform:'scale(.9) rotate(-3deg)'},{transform:'scale(1.08) rotate(3deg)'},{transform:'scale(1)'}], {duration: reduceMotion?1:420});
+  const msg = treatActions[b.dataset.t]();
+  say($('treatResult'), msg);
+});
+
+/* ==========================================================
+   RELAPSE SIMULATOR
+   ========================================================== */
+const relapses = ['3 seconds.','7 seconds.','12 seconds.','27 seconds.','Before you finish reading this sentence.','The moment your partner says "baby."','Immediately after the next notification.','The exact second they send a cute selfie.','You never recovered in the first place.'];
+let relapseBusy = false;
+$('btnRelapse').addEventListener('click', ()=>{
+  if(relapseBusy) return; relapseBusy = true;
+  const lb = $('loadbar'); lb.classList.remove('go'); void lb.offsetWidth; lb.classList.add('go');
+  $('relapseOut').textContent = '🔬 Analyzing absolutely nothing...';
+  setTimeout(()=>{
+    lb.classList.remove('go');
+    say($('relapseOut'), '💀 ' + pick(relapses));
+    relapseBusy = false;
+  }, reduceMotion ? 50 : 1400);
+});
+
+/* ==========================================================
+   CHALLENGES & CUTE MESSAGES
+   ========================================================== */
+const challenges = [
+  'Send your partner one genuine compliment without using a heart emoji.','Tell them your favorite memory together.','Send a picture of something that reminds you of them.','Describe your partner using only three words.','Tell them one little thing they do that makes you happy.','Ask them what snack they would bring you if you were sick.','Send a wholesome voice note.','Tell them something you appreciate but rarely say.','Pick a fictional couple name for the two of you.','Give each other a 60-second break from flirting and then exchange one cute message.','Share a song that reminds you of them.','Plan a simple date.','Take a silly selfie.','Tell them the first thing you noticed about them.'
+];
+let lastChallenge = -1;
+$('btnChallenge').addEventListener('click', ()=>{
+  let i; do{ i = rand(0, challenges.length-1); }while(i === lastChallenge && challenges.length > 1);
+  lastChallenge = i;
+  const c = $('challengeCard'); c.textContent = '🎯 ' + challenges[i];
+  c.classList.remove('swap'); void c.offsetWidth; c.classList.add('swap');
+  setStatus('Distracted 💗');
+});
+const cuteMsgs = [
+  'Okay, emergency protocol aside, I really like having you in my life.',
+  'You are officially responsible for my suspicious amount of smiling.',
+  'I am attempting to act normal, but you make it ridiculously difficult.',
+  'I think we should take a break from flirting and spend the next five minutes appreciating each other.',
+  'My anti-horny spray has failed to remove the part where I miss you.'
+];
+$('btnCopy').addEventListener('click', async ()=>{
+  const m = pick(cuteMsgs); const out = $('copyResult');
+  let ok = false;
+  try{
+    if(navigator.clipboard && window.isSecureContext !== false){ await navigator.clipboard.writeText(m); ok = true; }
+  }catch(e){}
+  if(!ok){                                    // fallback 1: legacy copy
+    try{
+      const ta = document.createElement('textarea'); ta.value = m; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
+      ok = document.execCommand('copy'); ta.remove();
+    }catch(e){}
+  }
+  say(out, ok ? '💌 Copied! Paste it to your favorite person: "' + m + '"'
+              : '💌 Clipboard unavailable here, so copy it by hand: "' + m + '"');
+});
+
+/* ==========================================================
+   INVENTORY
+   ========================================================== */
+function renderInventory(){
+  $('stSprays').textContent = state.sprays;
+  $('stMood').textContent = Math.round(state.mood) + '%';
+  $('stCool').textContent = state.cooldowns;
+  $('stStatus').textContent = state.status;
+}
+$('btnReset').addEventListener('click', ()=>{ $('confirmBox').hidden = false; $('btnReset').hidden = true; $('btnResetYes').focus(); });
+$('btnResetNo').addEventListener('click', ()=>{ $('confirmBox').hidden = true; $('btnReset').hidden = false; $('btnReset').focus(); });
+$('btnResetYes').addEventListener('click', ()=>{
+  state.sprays = 0; state.cooldowns = 0; state.liquid = 100; state.mood = rand(45,95); state.status = 'Unstable';
+  try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+  renderLiquid(); renderMeter();
+  $('confirmBox').hidden = true; $('btnReset').hidden = false;
+  say($('sprayResult'), '🧼 All stats wiped. The Department has forgotten everything about you.');
+});
+
+/* ==========================================================
+   SECRET BUTTON — DO NOT PRESS
+   ========================================================== */
+$('btnDnp').addEventListener('click', ()=>{
+  lastFocus = $('btnDnp');
+  closeOverlay(true);
+  overlay.className = 'overlay open ov-fin'; overlay.dataset.lock = '1';
+  ovBox.innerHTML = '<div class="alarm-lights" aria-hidden="true"></div><div class="countdown-num" id="ovTitle" aria-live="assertive">3</div><p style="font-weight:800;color:#ffd1dc">⚠️ WARNING. WARNING. YOU WERE TOLD.</p>';
+  const step = (n)=>{ const el = $('ovTitle'); if(el) el.textContent = n; };
+  ovLater(()=>step(2), 1000);
+  ovLater(()=>step(1), 2000);
+  ovLater(()=>{
+    document.body.classList.add('shake-screen');
+    ovBox.innerHTML = '<div class="alarm-lights" aria-hidden="true"></div>' +
+      '<div class="fin-title" id="ovTitle">💀 CONGRATULATIONS.<br>YOU HAVE UNLOCKED THE FINAL BOSS:<br>YOUR OWN IMAGINATION.</div>';
+  }, 3000);
+  ovLater(()=>{ document.body.classList.remove('shake-screen'); ovBox.insertAdjacentHTML('beforeend','<div class="fin-sub">THE SPRAY HAS NO POWER HERE.</div>'); }, 5200);
+  ovLater(()=>{
+    ovBox.insertAdjacentHTML('beforeend','<div class="fin-sub" style="color:#bfe4ff">Please submit your resignation from the Department of Acting Normal.</div><div style="margin-top:22px"><button class="btn white" id="btnReturn">RETURN TO NORMAL LIFE</button></div>');
+    const r = $('btnReturn'); r.focus();
+    r.addEventListener('click', ()=>{
+      overlay.dataset.lock = '0'; closeOverlay(true);
+      window.scrollTo({top:0, behavior: reduceMotion?'auto':'smooth'});
+      setStatus('Back to normal (ish) 🌸');
+    });
+  }, 7200);
+});
+
+/* ==========================================================
+   SECRET ROMANTIC MODE (tiny heart x5)
+   ========================================================== */
+let heartClicks = 0, heartTimer = null;
+$('tinyHeart').addEventListener('click', ()=>{
+  heartClicks++;
+  clearTimeout(heartTimer);
+  heartTimer = setTimeout(()=>{ heartClicks = 0; }, 3000);   // 5 clicks within a few seconds each
+  if(heartClicks >= 5){
+    heartClicks = 0;
+    lastFocus = $('tinyHeart');
+    $('loveMsg').textContent = ROMANTIC_MESSAGE.replace(/\{nickname\}/g, PARTNER_NICKNAME);
+    $('loveModal').classList.add('open');
+    $('btnLoveClose').focus();
+    rain(['💗','💖','💕','✨'], 30);
+  }
+});
+function closeLove(){ $('loveModal').classList.remove('open'); if(lastFocus && lastFocus.focus) lastFocus.focus(); }
+$('btnLoveClose').addEventListener('click', closeLove);
+$('loveModal').addEventListener('click', e=>{ if(e.target === $('loveModal')) closeLove(); });
+
+/* ---------- init ---------- */
+renderLiquid();
+renderMeter();
+renderInventory();
+</script>
+</body>
+</html>
